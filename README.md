@@ -12,10 +12,12 @@ workflow "Verify labels" {
 }
 
 action "VerifyLabels" {
-  uses = "yogevbd/enforce-label-action@master"
+  uses = "yogevbd/enforce-label-action@1.0.0"
   secrets = ["GITHUB_TOKEN"]
   env = {
     VALID_LABELS = "bug,enhancement,feature"
   }
 }
 ```
+
+Edit `VALID_LABELS` array to contain your desired valid labels.
