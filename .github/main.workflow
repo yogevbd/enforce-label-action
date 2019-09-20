@@ -1,5 +1,5 @@
 workflow "Verify labels" {
-  on = "pull-request"
+  on = "pullrequest"
   resolves = "Verify"
 }
 
