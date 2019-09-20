@@ -5,4 +5,5 @@ workflow "Verify labels" {
 
 action "Verify" {
   uses = "yogevbd/enforce-label-action@master"
+  secrets = ["GITHUB_TOKEN"]
 }
