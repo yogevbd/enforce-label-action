@@ -21,3 +21,4 @@ action "Verify Labels" {
 ```
 
 Edit `VALID_LABELS` array to contain your desired valid labels.
+
