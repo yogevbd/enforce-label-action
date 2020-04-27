@@ -8,7 +8,7 @@ jobs:
   require-label:
     runs-on: ubuntu-latest
     steps:
-    - uses: yogevbd/require-label-action@master
+    - uses: yogevbd/enforce-label-action@master
       with:
         VALID_LABELS: "bug,enhancement,feature"
         GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
