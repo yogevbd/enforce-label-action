@@ -3,21 +3,23 @@
 Enforce choosing label before merging PR. Usefull for generating automatic changelog and release notes with `github-release-notes`
 
 ## Example usage
-Create `.github/main.workflow` containing:
+Create `.github/workflows/enforce-labels.yml` containing:
 
 ```
-workflow "Verify labels" {
-  on = "pull_request"
-  resolves = "Verify Labels"
-}
+name: Require PR label
 
-action "Verify Labels" {
-  uses = "yogevbd/enforce-label-action@1.0.1"
-  secrets = ["GITHUB_TOKEN"]
-  env = {
-    VALID_LABELS = "bug,enhancement,feature"
-  }
-}
+on:
+  pull_request:
+    types: [opened, labeled, unlabeled]
+
+jobs:
+  require-label:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: yogevbd/require-label-action@master
+      with:
+        VALID_LABELS: "bug,enhancement,feature"
+        GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
 ```
 
 Edit `VALID_LABELS` array to contain your desired valid labels.
