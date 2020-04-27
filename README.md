@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: yogevbd/enforce-label-action@master
-      with:
+      env:
         VALID_LABELS: "bug,enhancement,feature"
         GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
 ```
