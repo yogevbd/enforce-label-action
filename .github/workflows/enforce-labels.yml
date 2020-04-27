@@ -1,7 +1,7 @@
 name: Require PR label
 
 on:
-  issues:
+  pull_request:
     types: [opened, labeled, unlabeled]
 
 jobs:
