@@ -12,7 +12,7 @@ async function run() {
     const labels = github.context!.payload!.pull_request!.labels;
     console.log(`PR labels: ${JSON.stringify(github.context)}`);
 
-    if (!requiredLabelsAll.every(l => l.includes(l.name))) {
+    if (!requiredLabelsAll.every(requiredLabel => labels.find(l => l.name === requiredLabel))) {
       core.setFailed(`All labels are required for this PR: ${requiredLabelsAll}`);
     }
 
