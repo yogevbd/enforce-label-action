@@ -9,5 +9,5 @@ jobs:
     steps:
     - uses: yogevbd/enforce-label-action@master
       with:
-        REQUIRED_LABELS_ANY: "bug,enhancement,feature"
+        # REQUIRED_LABELS_ANY: "bug,enhancement,feature"
         BANNED_LABELS: "banned"
