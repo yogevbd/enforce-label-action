@@ -23,6 +23,6 @@ jobs:
         BANNED_LABELS: "banned"
 
 ```
-**`REQUIRED_LABELS_ANY`**: Force PR's to have at least one label.
-**`REQUIRED_LABELS_ALL`**: Force PR's to have all labels.
-**`BANNED_LABELS`**: Prevent PR's with those labels to be merged.
+**`REQUIRED_LABELS_ANY`**: Force PR's to have at least one label.  
+**`REQUIRED_LABELS_ALL`**: Force PR's to have all labels.  
+**`BANNED_LABELS`**: Prevent PR's with those labels to be merged.  
