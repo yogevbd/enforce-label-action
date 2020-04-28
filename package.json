@@ -1,0 +1,31 @@
+{
+  "name": "enforce-label-action",
+  "version": "1.0.0",
+  "description": "Enforce PR labels for Github Actions",
+  "main": "lib/main.js",
+  "scripts": {
+    "build": "tsc",
+    "format": "prettier --write src/*.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yogevbd/enforce-label-action.git"
+  },
+  "keywords": [
+    "actions",
+    "github",
+    "labels",
+    "lint"
+  ],
+  "author": "Yogev Ben David <yogev132@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/github": "2.1.1",
+    "@actions/core": "1.2.3"
+  },
+  "devDependencies": {
+    "prettier": "^2.0.5",
+    "@types/node": "^13.13.4",
+    "typescript": "^3.8.3"
+  }
+}
