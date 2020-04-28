@@ -5,7 +5,7 @@ Enforce choosing label before merging PR. Usefull for generating automatic chang
 ## Example usage
 Create `.github/workflows/enforce-labels.yml` containing:
 
-```
+```yml
 name: Require PR label
 
 on:
