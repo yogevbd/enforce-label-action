@@ -3,13 +3,13 @@ import * as github from '@actions/github';
 
 async function run() {
   try {
-    const requiredLabelsInput = core.getInput('valid-labels', {required: false});
+    const requiredLabelsInput = core.getInput('REQUIRED_LABELS_ANY', {required: false});
     const requiredLabels = requiredLabelsInput !== '' ? requiredLabelsInput.split(',') : [];
 
-    const requiredLabelsAllInput = core.getInput('valid-labels-all', {required: false});
+    const requiredLabelsAllInput = core.getInput('REQUIRED_LABELS_ALL', {required: false});
     const requiredLabelsAll = requiredLabelsAllInput !== '' ? requiredLabelsAllInput.split(',') : [];
     
-    const bannedLabelsInput = core.getInput('banned-labels', {required: false});
+    const bannedLabelsInput = core.getInput('BANNED_LABELS', {required: false});
     const bannedLabels = bannedLabelsInput !== '' ? bannedLabelsInput.split(',') : [];
 
     core.debug(`Verified PR match valid labels: ${requiredLabels}`);

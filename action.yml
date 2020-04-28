@@ -5,15 +5,15 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
 inputs:
-  valid-labels:
+  REQUIRED_LABELS_ANY:
     description: 'Require at least one label'
     required: true
     default: ""
-  valid-labels-all:
+  REQUIRED_LABELS_ALL:
     description: 'Require all labels'
     required: true
     default: ""
-  banned-labels:
+  BANNED_LABELS:
     description: 'Banned'
     required: true
     default: ""

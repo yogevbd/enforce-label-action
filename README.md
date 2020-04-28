@@ -18,8 +18,11 @@ jobs:
     steps:
     - uses: yogevbd/enforce-label-action@master
       env:
-        VALID_LABELS: "bug,enhancement,feature"
-        GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-```
+        REQUIRED_LABELS_ANY: "bug,enhancement,wontfix"
+        REQUIRED_LABELS_ALL: "required"
+        BANNED_LABELS: "banned"
 
-Edit `VALID_LABELS` array to contain your desired valid labels.
+```
+**`REQUIRED_LABELS_ANY`**: Force PR's to have at least one label.
+**`REQUIRED_LABELS_ALL`**: Force PR's to have all labels.
+**`BANNED_LABELS`**: Prevent PR's with those labels to be merged.
