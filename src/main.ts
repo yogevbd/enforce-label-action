@@ -4,7 +4,7 @@ import * as github from '@actions/github';
 async function run() {
   try {
     const requiredLabelsInput = core.getInput('REQUIRED_LABELS_ANY', {required: false});
-    const requiredLabels = requiredLabelsInput !== '' && requiredLabelsInput.split(',');
+    const requiredLabels = requiredLabelsInput !== '' ? requiredLabelsInput.split(',') : [];
 
     const requiredLabelsAllInput = core.getInput('REQUIRED_LABELS_ALL', {required: false});
     const requiredLabelsAll = requiredLabelsAllInput !== '' ? requiredLabelsAllInput.split(',') : [];
@@ -21,7 +21,7 @@ async function run() {
       core.setFailed(`All labels are required for this PR: ${requiredLabelsAll}`);
     }
 
-    if (requiredLabels && !labels.some(l => requiredLabels.includes(l.name))) {
+    if (!labels.some(l => requiredLabels.includes(l.name))) {
       core.setFailed(`Please select one of the required labels for this PR: ${requiredLabels}`);
     }
 
