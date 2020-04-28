@@ -7,13 +7,7 @@ runs:
 inputs:
   REQUIRED_LABELS_ANY:
     description: 'Require at least one label'
-    required: true
-    default: ""
   REQUIRED_LABELS_ALL:
     description: 'Require all labels'
-    required: true
-    default: ""
   BANNED_LABELS:
     description: 'Banned'
-    required: true
-    default: ""
