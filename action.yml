@@ -1,11 +1,19 @@
-name: 'Require PR labels for Github Actions'
-description: 'Require PR labels for Github Actions'
+name: 'Enforce PR labels for Github Actions'
+description: 'Enforce PR labels for Github Actions'
 author: 'Yogev Ben David'
 runs:
   using: 'docker'
   image: 'Dockerfile'
 inputs:
   valid-labels:
-    description: 'Verify PR label'
+    description: 'Require at least one label'
     required: true
-    default: "bug,enhancement,feature"
+    default: "bug,enhancement"
+  valid-labels-all:
+    description: 'Require all labels'
+    required: true
+    default: ""
+  banned-labels:
+    description: 'Banned'
+    required: true
+    default: ""
