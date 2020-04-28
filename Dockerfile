@@ -1,11 +1,8 @@
-FROM node:10-slim
+FROM node:slim
 
-LABEL com.github.actions.name="Enforce PR label"
-LABEL com.github.actions.description="Enforce choosing label before merging PR"
-LABEL com.github.actions.icon="code"
-LABEL com.github.actions.color="blue"
+COPY . .
 
-LABEL maintainer="Yogev Ben David <yogev132@gmail.com>"
+RUN npm install
+RUN node_modules/typescript/bin/tsc
 
-COPY lib /action/lib
-ENTRYPOINT ["/action/lib/entrypoint.sh"]
+ENTRYPOINT ["node", "/lib/main.js"]

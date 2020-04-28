@@ -1,14 +1,13 @@
-name: Require PR label
+name: Enforce PR labels for Github Actions
 
 on:
   pull_request:
     types: [opened, labeled, unlabeled]
-
 jobs:
-  require-label:
+  enforce-label:
     runs-on: ubuntu-latest
     steps:
     - uses: yogevbd/enforce-label-action@master
-      env:
-        VALID_LABELS: "bug,enhancement,feature"
-        GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+      with:
+        valid-labels: "bug,enhancement,feature"
+        banned-labels: "wontfix"
