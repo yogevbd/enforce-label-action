@@ -8,7 +8,7 @@ inputs:
   valid-labels:
     description: 'Require at least one label'
     required: true
-    default: "bug,enhancement"
+    default: ""
   valid-labels-all:
     description: 'Require all labels'
     required: true
