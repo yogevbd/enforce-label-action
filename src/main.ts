@@ -3,9 +3,9 @@ import * as github from '@actions/github';
 
 async function run() {
   try {
-    const requiredLabels = core.getInput('valid-labels', {required: true}).split(',');
-    const requiredLabelsAll = core.getInput('valid-labels-all', {required: true}).split(',');
-    const bannedLabels = core.getInput('banned-labels', {required: true}).split(',');
+    const requiredLabels = core.getInput('valid-labels', {required: false}).split(',');
+    const requiredLabelsAll = core.getInput('valid-labels-all', {required: false}).split(',');
+    const bannedLabels = core.getInput('banned-labels', {required: false}).split(',');
 
     core.debug(`Verified PR match valid labels: ${requiredLabels}`);
 
