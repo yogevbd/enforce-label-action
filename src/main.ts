@@ -17,7 +17,7 @@ async function run() {
 
 function enforceAnyLabels(labels) {
   const requiredLabelsAny: string[] = getInputArray('REQUIRED_LABELS_ANY');
-  if (labels.some(l => requiredLabelsAny.includes(l.name))) {
+  if (!requiredLabelsAny.some(l => labels.includes(l))) {
     const requiredLabelsAnyDescription = getInputString('REQUIRED_LABELS_ANY_DESCRIPTION', `Please select one of the required labels for this PR: ${requiredLabelsAny}`);
     core.setFailed(requiredLabelsAnyDescription);
   }
