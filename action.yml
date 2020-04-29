@@ -8,9 +8,12 @@ inputs:
   REQUIRED_LABELS_ANY:
     description: 'Require at least one label'
   REQUIRED_LABELS_ANY_DESCRIPTION:
+    description: 'Require at least one label description'
   REQUIRED_LABELS_ALL:
     description: 'Require all labels'
   REQUIRED_LABELS_ALL_DESCRIPTION:
+    description: 'Require all labels description'
   BANNED_LABELS:
     description: 'Banned'
   BANNED_LABELS_DESCRIPTION:
+    description: 'Banned description'
