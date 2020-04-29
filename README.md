@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: yogevbd/enforce-label-action@2.0.0
-      env:
+      with:
         REQUIRED_LABELS_ANY: "bug,enhancement,wontfix"
         REQUIRED_LABELS_ALL: "required"
         BANNED_LABELS: "banned"
