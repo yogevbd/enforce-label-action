@@ -1,13 +1,14 @@
-name: Enforce PR labels for Github Actions
+name: Enforce PR labels
 
 on:
   pull_request:
-    types: [opened, labeled, unlabeled]
+    types: [labeled, unlabeled, opened, edited, synchronize]
 jobs:
   enforce-label:
     runs-on: ubuntu-latest
     steps:
     - uses: yogevbd/enforce-label-action@master
       with:
-        REQUIRED_LABELS_ANY: "bug,enhancement,feature"
+        REQUIRED_LABELS_ANY: "bug,enhancement,skip-changelog"
         BANNED_LABELS: "banned"
+        REQUIRED_LABELS_ANY_DESCRIPTION: "Select at least one label ['bug','enhancement','feature']"
