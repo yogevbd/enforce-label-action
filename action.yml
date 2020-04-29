@@ -1,5 +1,5 @@
-name: 'Enforce PR labels for Github Actions'
-description: 'Enforce PR labels for Github Actions'
+name: 'Enforce PR labels'
+description: 'Enforce PR labels'
 author: 'Yogev Ben David'
 runs:
   using: 'docker'
@@ -7,13 +7,13 @@ runs:
 inputs:
   REQUIRED_LABELS_ANY:
     description: 'Require at least one label'
-    required: true
-    default: ""
+  REQUIRED_LABELS_ANY_DESCRIPTION:
+    description: 'Require at least one label description'
   REQUIRED_LABELS_ALL:
     description: 'Require all labels'
-    required: true
-    default: ""
+  REQUIRED_LABELS_ALL_DESCRIPTION:
+    description: 'Require all labels description'
   BANNED_LABELS:
     description: 'Banned'
-    required: true
-    default: ""
+  BANNED_LABELS_DESCRIPTION:
+    description: 'Banned description'
