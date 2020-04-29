@@ -7,7 +7,7 @@ jobs:
   enforce-label:
     runs-on: ubuntu-latest
     steps:
-    - uses: yogevbd/enforce-label-action@descriptionSupport
+    - uses: yogevbd/enforce-label-action@master
       with:
         REQUIRED_LABELS_ANY: "bug,enhancement,skip-changelog"
         BANNED_LABELS: "banned"
