@@ -1,4 +1,4 @@
-name: Enforce PR labels for Github Actions
+name: Enforce PR labels
 
 on:
   pull_request:
