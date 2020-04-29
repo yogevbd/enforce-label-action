@@ -2,8 +2,6 @@ name: Enforce PR labels for Github Actions
 
 on:
   pull_request:
-    types: [opened, labeled, unlabeled]
-  push:
 jobs:
   enforce-label:
     runs-on: ubuntu-latest
