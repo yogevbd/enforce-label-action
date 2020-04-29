@@ -47,7 +47,7 @@ function getInputArray(name): string[] {
 
 function getInputString(name, defaultValue): string {
   const rawInput = core.getInput(name, {required: false});
-  return rawInput || defaultValue;
+  return rawInput !== '' ? rawInput : defaultValue;
 }
 
 run();
