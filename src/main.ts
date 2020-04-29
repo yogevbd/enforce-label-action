@@ -3,8 +3,8 @@ import * as github from '@actions/github';
 
 async function run() {
   try {
+    console.log(`github.context: ${JSON.stringify(github.context)}`);
     const labels = github.context!.payload!.pull_request!.labels;
-    console.log(`PR labels: ${JSON.stringify(github.context)}`);
 
     enforceAnyLabels(labels);
     enforceAllLabels(labels);
