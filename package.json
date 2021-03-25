@@ -2,7 +2,6 @@
   "name": "enforce-label-action",
   "version": "1.0.0",
   "description": "Enforce PR labels for Github Actions",
-  "main": "src/main.ts",
   "scripts": {
     "build": "tsc",
     "format": "prettier --write src/*.ts"
