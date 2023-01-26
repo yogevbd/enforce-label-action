@@ -34,7 +34,7 @@ function enforceBannedLabels(labels) {
   const bannedLabels = getInputArray('BANNED_LABELS');
   let bannedLabel;
     if (bannedLabels && (bannedLabel = labels.find(l => bannedLabels.includes(l.name)))) {
-      const bannedLabelsDescription = getInputString('BANNED_LABELS_DESCRIPTION', `${bannedLabel.name} label is banned`);
+      const bannedLabelsDescription = getInputString('BANNED_LABELS_DESCRIPTION', `${bannedLabel.name} label is banned, if this check is required merging will be blocked until it is removed`);
       core.setFailed(bannedLabelsDescription);
     }
 }
