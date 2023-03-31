@@ -4,3 +4,4 @@ node_modules/
 .npm
 lib/
 package-lock.json
+.idea

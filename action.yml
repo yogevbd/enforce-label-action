@@ -7,14 +7,17 @@ runs:
 inputs:
   REQUIRED_LABELS_ANY:
     description: 'Require at least one label'
+    default: "impact 1 * likelyhood 1 = risk 1,impact 1 * likelyhood 2 = risk 2,impact 2 * likelyhood 1 = risk 2,impact 1 * likelyhood 3 = risk 3,impact 3 * likelyhood 1 = risk 3,impact 2 * likelyhood 2 = risk 4,impact 2 * likelyhood 3 = risk 6,impact 3 * likelyhood 2 = risk 6,impact 3 * likelyhood 3 = risk 9"
   REQUIRED_LABELS_ANY_DESCRIPTION:
     description: 'Require at least one label description'
+    default: "Select at least one label [impact 1 * likelyhood 1 = risk 1,impact 1 * likelyhood 2 = risk 2,impact 2 * likelyhood 1 = risk 2,impact 1 * likelyhood 3 = risk 3,impact 3 * likelyhood 1 = risk 3,impact 2 * likelyhood 2 = risk 4,impact 2 * likelyhood 3 = risk 6,impact 3 * likelyhood 2 = risk 6,impact 3 * likelyhood 3 = risk 9]"
   REQUIRED_LABELS_ALL:
     description: 'Require all labels'
   REQUIRED_LABELS_ALL_DESCRIPTION:
     description: 'Require all labels description'
   BANNED_LABELS:
     description: 'Banned'
+    default: "impact 2 * likelyhood 2 = risk 4,impact 2 * likelyhood 3 = risk 6,impact 3 * likelyhood 2 = risk 6,impact 3 * likelyhood 3 = risk 9"
   BANNED_LABELS_DESCRIPTION:
     description: 'Banned description'
     
